@@ -43,8 +43,8 @@ a {
   justify-content:center;
   align-items: flex-start;
   position: relative;
-  // background-image: url(https://upload.cc/i1/2021/10/21/wnDVaQ.png);
-  background-image: url(../../image/Mask-Group-6.png);
+  background-image: url(https://upload.cc/i1/2021/10/21/wnDVaQ.png);
+  // background-image: url(../../image/Mask-Group-6.png);
   background-size: cover;
   padding: 0 3%;
 }
@@ -111,7 +111,7 @@ export default {
       console.log(menuName)
       if (menuName === 'about') {
         console.log('成功選中about了')
-        landingBg.style.backgroundImage = 'url(../../image/Mask-Group-7.png)'
+        landingBg.style.backgroundImage = 'url(https://upload.cc/i1/2021/10/21/VNzlx5.png)'
         menu.style.color = '#FFF'
         more.style.display = 'none'
       }
