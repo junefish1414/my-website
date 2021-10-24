@@ -1,12 +1,11 @@
-
 <template>
-  <div id="nav">
+  <!-- <div id="nav">
     <a class="Logo" href="#">June</a>
     <div>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-  </div>
+  </div> -->
   <router-view/>
 </template>
 
@@ -33,10 +32,13 @@ body{
   text-align: center;
   color: #2c3e50;
   width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  height: auto;
   max-width: 100%;
   position: relative;
+  text-align: left;
+  p{
+      line-height: 180%;
+  }
 }
 
 #nav {
@@ -62,5 +64,23 @@ body{
     font-weight: 600;
     border-bottom: 6px solid;
   }
+}
+::selection {
+    background: #70A9A1;
+    color: #FFF;
+}
+::-moz-selection {
+    background: #70A9A1;
+    color: #FFF;
+}
+.all_box{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+@media screen and (max-width: 1920px) {
+    .all_box{
+        max-width: 1200px;
+    }
 }
 </style>

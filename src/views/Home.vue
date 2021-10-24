@@ -1,6 +1,8 @@
 <template>
   <div class="home">
     <HelloWorld msg="Welcome to June's Website"/>
+    <AboutMe></AboutMe>
+    <AboutJob></AboutJob>
   </div>
 </template>
 
@@ -13,11 +15,15 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
+import AboutMe from '@/components/AboutMe.vue'
+import AboutJob from '@/components/AboutJob.vue'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    HelloWorld,
+    AboutMe,
+    AboutJob
   }
 }
 </script>
