@@ -74,7 +74,7 @@ a {
   justify-content:center;
   align-items: flex-start;
   position: relative;
-  transition: ease .3s;
+  transition: ease-in .5s;
   background-image: url(https://upload.cc/i1/2021/10/22/2htqeB.png);
   // background-image: url(../../image/Mask-Group-6.png);
   background-size: cover;
@@ -184,7 +184,7 @@ export default {
       const nav = document.querySelector('#nav')
       if (screenHeight > 0) {
         nav.classList.add('active')
-        nav.style.padding = '10px 2%'
+        nav.style.padding = '20px 2%'
         console.log('超過0px')
       } else {
         nav.classList.remove('active')

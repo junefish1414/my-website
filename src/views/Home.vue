@@ -4,6 +4,7 @@
     <AboutMe></AboutMe>
     <AboutJob></AboutJob>
     <Experience></Experience>
+    <MySkill></MySkill>
   </div>
 </template>
 
@@ -19,6 +20,7 @@ import HelloWorld from '@/components/HelloWorld.vue'
 import AboutMe from '@/components/AboutMe.vue'
 import AboutJob from '@/components/AboutJob.vue'
 import Experience from '@/components/Experience.vue'
+import MySkill from '@/components/MySkill.vue'
 
 export default {
   name: 'Home',
@@ -26,7 +28,8 @@ export default {
     HelloWorld,
     AboutMe,
     AboutJob,
-    Experience
+    Experience,
+    MySkill
   }
 }
 </script>
