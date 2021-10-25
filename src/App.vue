@@ -6,6 +6,7 @@
       <router-link to="/about">About</router-link>
     </div>
   </div> -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <router-view/>
 </template>
 

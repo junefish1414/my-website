@@ -1,12 +1,12 @@
 <template>
-  <div id="nav">
+  <div id="nav" @scroll="navChange">
     <a class="Logo" href="#">June</a>
     <div>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
   </div>
-  <div class="landingPage">
+  <div class="landingPage" @scroll="navChange">
     <div class="menus">
       <a href="#" class="menu" data-menuName="about" @mouseenter="changeBackground" @mouseleave="recoverBackground">
         <h2 class="eng">ABOUT</h2>
@@ -121,6 +121,16 @@ a {
   font-size: 20px;
   color: #CCCCCC;
 }
+.active{
+  background-color:rgba(255,255,255,0.8);
+  box-shadow: 0px 3px 5px rgba(0,0,0,0.3);
+  backdrop-filter: blur(4px);
+  transition: ease .3s;
+  .Logo{
+    font-size: 30px!important;
+  }
+}
+
 </style>
 
 <script>
@@ -138,14 +148,11 @@ export default {
   },
   methods: {
     changeBackground (e) {
-      console.log('進入範圍內')
       const landingBg = document.querySelector('.landingPage')
       const nav = document.querySelector('#nav')
       const more = document.querySelector('.more')
       const menuName = e.target.dataset.menuname
-      console.log(menuName)
       if (menuName === 'about') {
-        console.log('成功選中about了')
         landingBg.style.backgroundImage = 'url(https://upload.cc/i1/2021/10/21/VNzlx5.png)'
         more.style.display = 'none'
         nav.style.display = 'none'
@@ -160,14 +167,30 @@ export default {
       }
     },
     recoverBackground (e) {
-      console.log('我離開了')
       const landingBg = document.querySelector('.landingPage')
       const more = document.querySelector('.more')
       const nav = document.querySelector('#nav')
       landingBg.style.backgroundImage = 'url(https://upload.cc/i1/2021/10/22/2htqeB.png)'
       more.style.display = 'block'
       nav.style.display = 'flex'
+    },
+    navChange () {
+      console.log('滑動觸發')
     }
+  },
+  mounted () {
+    window.addEventListener('scroll', e => {
+      const screenHeight = window.scrollY
+      const nav = document.querySelector('#nav')
+      if (screenHeight > 0) {
+        nav.classList.add('active')
+        nav.style.padding = '10px 2%'
+        console.log('超過0px')
+      } else {
+        nav.classList.remove('active')
+        console.log('現在歸零了')
+      }
+    })
   }
 }
 </script>

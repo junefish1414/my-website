@@ -1,8 +1,9 @@
 <template>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
    <div class="aboutJob">
        <div class="all_box">
            <div class="jContent">
-               <div class="jc-left">
+               <div class="jc-left" data-aos="fade-up">
                    <div class="jc-l-t">
                        <div class="jc-num">
                            <h3><span>2</span>years</h3>
@@ -22,6 +23,7 @@
 </template>
 
 <style lang="scss">
+
     body{
         position: relative;
     }
