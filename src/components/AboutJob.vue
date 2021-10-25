@@ -1,9 +1,8 @@
 <template>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
    <div class="aboutJob">
        <div class="all_box">
            <div class="jContent">
-               <div class="jc-left" data-aos="fade-up">
+               <div class="jc-left" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
                    <div class="jc-l-t">
                        <div class="jc-num">
                            <h3><span>2</span>years</h3>
@@ -43,17 +42,18 @@
     .aboutJob{
         background-image: url(../assets/image/aboutJob_bg.png);
         width: 100%;
-        padding: 100px;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
         color: #FFF;
+        position: relative;
+        background-attachment: fixed;
     }
     .jContent{
         display: flex;
         .jc-left{
-            flex:4;
-            padding-right: 3%;
+            flex:8;
+            padding: 100px 3% 100px 0;
             .jc-l-t{
                 display: flex;
                 .jc-num{
@@ -76,11 +76,16 @@
             }
         }
         .jc-right{
-            flex: 2;
+            flex: 4;
+            background-image: url(../assets/image/backview.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right center;
         }
         .jc-text{
             margin-top: 40px;
             position: relative;
+            max-width: 700px;
             a {
                 text-decoration: none;
                 background: rgba(255, 255, 255, 0.2);

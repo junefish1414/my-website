@@ -2,19 +2,19 @@
     <div class="sizeBox">
         <div class="all_box">
             <div class="about">
-                <div class="pic">
+                <div class="pic" data-aos="fade-left" data-aos-delay="500" data-aos-duration="500" >
                     <img src="../assets/image/self.png" alt="">
                 </div>
                 <div class="intro">
                     <div class="title">01</div>
-                    <div class="aboutText">
-                        <h3><span>王歆瑜</span>Xin Yu Wang</h3>
-                        <p>嗨！我是June，對所有事物都充滿好奇心並願意嘗試與挑戰。熱愛設計與音樂，喜歡捕捉生活中的片刻感動並融入設計中。經常有人以能動能靜形容我，平時活潑熱情，但當需要專注在自己手上的任務時，願意付出長時間研究並有耐心地處理遇到的問題。<br><br>
+                    <div class="aboutText"  data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000">
+                        <h3 data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000"><span>王歆瑜</span>Xin Yu Wang</h3>
+                        <p data-aos="fade-up" data-aos-delay="1200" data-aos-duration="1000">嗨！我是June，對所有事物都充滿好奇心並願意嘗試與挑戰。熱愛設計與音樂，喜歡捕捉生活中的片刻感動並融入設計中。經常有人以能動能靜形容我，平時活潑熱情，但當需要專注在自己手上的任務時，願意付出長時間研究並有耐心地處理遇到的問題。<br><br>
 
     原以平面設計出發，自從接觸到網頁設計之後，意識到 Coding 的豐富與多元。目前致力於研究前端技術，以持續探索 Web 未知的可能性為樂。增進能力之餘，不定期會新增一些JS的小作品，也記錄程式相關筆記與自己的心路歷程，希望以後能開發出更多有趣的 Side Project。
     </p>
                     </div>
-                    <div class="contact">
+                    <div class="contact" data-aos="fade-up" data-aos-delay="1400" data-aos-duration="800">
                         <div><img src="../assets/image/icon-1.png" alt=""><a href="https://github.com/junefish1414" target="_blank">GitHub | @junefish1414</a></div>
                         <div><img src="../assets/image/icon-2.png" alt=""><a href="https://codepen.io/collection/oEgVEr" target="_blank">CodePen精選 | @yyfish1414</a></div>
                         <div><img src="../assets/image/icon-3.png" alt=""><a href="mailto:acc101130@gm.ntcu.edu.tw" >E-mail | acc101130@gm.ntcu.edu.tw</a></div>
@@ -143,9 +143,6 @@ p{
 
 <script>
 export default {
-  name: 'AboutMe',
-  props: {
-    msg: String
-  }
+  name: 'AboutMe'
 }
 </script>

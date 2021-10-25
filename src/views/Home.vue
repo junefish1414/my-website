@@ -3,6 +3,7 @@
     <HelloWorld msg="Welcome to June's Website"/>
     <AboutMe></AboutMe>
     <AboutJob></AboutJob>
+    <Experience></Experience>
   </div>
 </template>
 
@@ -17,13 +18,15 @@
 import HelloWorld from '@/components/HelloWorld.vue'
 import AboutMe from '@/components/AboutMe.vue'
 import AboutJob from '@/components/AboutJob.vue'
+import Experience from '@/components/Experience.vue'
 
 export default {
   name: 'Home',
   components: {
     HelloWorld,
     AboutMe,
-    AboutJob
+    AboutJob,
+    Experience
   }
 }
 </script>
