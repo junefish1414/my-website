@@ -51,6 +51,7 @@ a {
   z-index: 999;
   width: 100%;
   overflow: hidden;
+  max-height: 75px;
 
   a {
     font-weight: bold;

@@ -30,7 +30,7 @@
                     ◆ 使用 ES5、 ES6 語法<br>
                     ◆ 透過 axios / AJAX / JSON 串接 API<br>
                     ◆ 了解 This、Hoisting 等 JS 核心概念<br>
-                    ◆ 以ESLint Standard Style 規範進行開發<br>
+                    ◆ 以 ESLint Standard Style 規範進行開發<br>
                     ◆ 使用 Vue.js 框架進行開發<br>
                     ◆ 使用 Vue CLI 於專案<br>
                     ◆ 使用 Vue Router 管理路由<br>
@@ -44,8 +44,8 @@
                     ◆ 使用 Git 進行版本控制 <br>
                     ◆ 使用 Sourcetree 版本控制介面<br><br>
                     延伸工具：<br>
-                    ◆ 熟悉 Illustrator、Photoshop<br>
-                    ◆ 熟悉 Adobe Xd
+                    ◆ 熟悉 Illustrator、Photoshop、Adobe XD<br>
+                    ◆ 使用 Visual Studio 作為主要撰寫工具
                 </p>
             </div>
          </div>
