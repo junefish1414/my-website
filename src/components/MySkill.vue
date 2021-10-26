@@ -119,6 +119,10 @@ $line-fz-title:20px;
             justify-content: center;
             align-items: center;
             padding: 50px;
+            transition:
+            font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+            flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+            background-color 0.2s;
         }
         h6{
             color: $primay-color;
@@ -128,10 +132,18 @@ $line-fz-title:20px;
         }
         h3{
             font-size: $title-skill;
+            font-weight: 300;
         }
         ul{
             text-align: left;
             display: none;
+            border-top: 1px solid $primay-color-light;
+            padding-top: 20px;
+            margin-top: 10px;
+        }
+        li{
+            margin: 15px 0;
+            list-style-type: square;
         }
     }
     .sk1{
@@ -143,7 +155,17 @@ $line-fz-title:20px;
     .sk3{
         background-image: url(../assets/image/Group-18.png);
     }
+    .sk-active{
+        flex: 2;
+        .sk-mask{
+            background-color:rgba(81,81,81,0.8);
+        }
+        ul{
+            display: block;
+        }
+    }
 }
+
 </style>
 
 <script>
@@ -155,7 +177,7 @@ export default {
       const sk1 = document.querySelector('.sk1')
       console.log(skillName)
       if (skillName === 'htcs') {
-        sk1.style.flex = '2'
+        sk1.classList.add('sk-active')
       }
     }
   }

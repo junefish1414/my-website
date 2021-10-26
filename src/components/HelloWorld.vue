@@ -123,7 +123,7 @@ a {
 }
 .active{
   background-color:rgba(255,255,255,0.8);
-  box-shadow: 0px 3px 5px rgba(0,0,0,0.3);
+  box-shadow: 0px 3px 5px rgba(0,0,0,0.1);
   backdrop-filter: blur(4px);
   transition: ease .3s;
   .Logo{
