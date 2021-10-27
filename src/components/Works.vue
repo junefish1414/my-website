@@ -1,5 +1,5 @@
 <template>
-    <div class="Works">
+    <a class="Works" id="worksPage">
         <div class="all_box">
             <div class="intro">
                 <div class="title">03</div>
@@ -16,27 +16,45 @@
                         <a href="http://www.zhanrui-design.com/" target="_blank"><img src="../assets/image/link-icon.svg" alt=""></a>
                     </div>
                 </a>
-                <div class="work work2">
+                <a href="https://www.lawyer-fredliu.com/" target="_blank" class="work work2">
                     <div class="work-mask">
                         <div class="workName">
-                            <h6></h6>
-                            <p></p>
+                            <h6>劉鴻傑律師事務所 | 網頁設計</h6>
+                            <p>Design by June</p>
                         </div>
-                        <a href=""><img src="" alt=""></a>
+                        <a href="https://www.lawyer-fredliu.com/" target="_blank"><img src="../assets/image/link-icon.svg" alt=""></a>
                     </div>
-                </div>
-                <div class="work work3">
+                </a>
+                <a href="http://www.powerloan.com.tw/" target="_blank" class="work work3">
                     <div class="work-mask">
                         <div class="workName">
-                            <h6></h6>
-                            <p></p>
+                            <h6>威力貸專業貸款公司 | 網頁設計</h6>
+                            <p>Design by June</p>
                         </div>
-                        <a href=""><img src="" alt=""></a>
+                        <a href="http://www.powerloan.com.tw/" target="_blank"><img src="../assets/image/link-icon.svg" alt=""></a>
                     </div>
-                </div>
+                </a>
+                <a href="http://www.betonbrut.com.tw/" target="_blank" class="work work4">
+                    <div class="work-mask">
+                        <div class="workName">
+                            <h6>清水模有限股份公司 | 網頁設計</h6>
+                            <p>Design by June</p>
+                        </div>
+                        <a href="http://www.betonbrut.com.tw/" target="_blank"><img src="../assets/image/link-icon.svg" alt=""></a>
+                    </div>
+                </a>
+                <a href="http://www.shiouda.com.tw/" target="_blank" class="work work5">
+                    <div class="work-mask">
+                        <div class="workName">
+                            <h6>修達手機維修 | 網頁設計</h6>
+                            <p>Design by June</p>
+                        </div>
+                        <a href="http://www.shiouda.com.tw/" target="_blank"><img src="../assets/image/link-icon.svg" alt=""></a>
+                    </div>
+                </a>
             </div>
         </div>
-    </div>
+    </a>
 </template>
 
 <style lang="scss">
@@ -52,6 +70,7 @@ $line-fz-middle:18px;
 
 .Works{
     padding: 50px 0;
+    display: block;
     .all_box{
         max-width: 1400px;
     }
@@ -89,7 +108,8 @@ $line-fz-middle:18px;
     display: flex;
     margin-top: 50px;
     align-content: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     .work{
         background-repeat: no-repeat;
         background-size: cover;
@@ -98,11 +118,12 @@ $line-fz-middle:18px;
         display: flex;
         align-items: flex-end;
         height: 17vw;
-        width: 31%;
+        width: 30%;
         border-radius: 5px;
         border:1px solid $primay-color-light;
         overflow: hidden;
         transition: ease-in .3s;
+        margin: 15px 1%;
         &:hover .work-mask{
             opacity: 1;
         }
@@ -136,6 +157,8 @@ $line-fz-middle:18px;
 .work1{background-image: url(../assets/image/work01.png);}
 .work2{background-image: url(../assets/image/work02.png);}
 .work3{background-image: url(../assets/image/work03.png);}
+.work4{background-image: url(../assets/image/work04.png);}
+.work5{background-image: url(../assets/image/work05.png);}
 
 @keyframes scaleBig {
     0%{

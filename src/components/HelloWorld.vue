@@ -8,15 +8,15 @@
   </div>
   <div class="landingPage" @scroll="navChange">
     <div class="menus">
-      <a href="#" class="menu" data-menuName="about" @mouseenter="changeBackground" @mouseleave="recoverBackground">
+      <a class="menu" data-menuName="about" @mouseenter="changeBackground" @mouseleave="recoverBackground" @click="toAbout">
         <h2 class="eng">ABOUT</h2>
         <p class="intro"><span class="num">01</span>關於</p>
       </a>
-      <a href="#" class="menu" data-menuName="skills" @mouseenter="changeBackground" @mouseleave="recoverBackground" >
+      <a class="menu" data-menuName="skills" @mouseenter="changeBackground" @mouseleave="recoverBackground" @click="toSkill" >
         <h2 class="eng">SKILLS</h2>
         <p class="intro"><span class="num">02</span>技能</p>
       </a>
-      <a href="#" class="menu" data-menuName="works" @mouseenter="changeBackground" @mouseleave="recoverBackground">
+      <a class="menu" data-menuName="works" @mouseenter="changeBackground" @mouseleave="recoverBackground" @click="toWork">
         <h2 class="eng">WORKS</h2>
         <p class="intro"><span class="num">03</span>作品</p>
       </a>
@@ -92,6 +92,7 @@ a {
   .menu{
     text-align: left;
     margin-right: 5%;
+    cursor: pointer;
     &:hover{
       color: #FFF;
     }
@@ -177,6 +178,15 @@ export default {
     },
     navChange () {
       console.log('滑動觸發')
+    },
+    toAbout () {
+      document.querySelector('#aboutPage').scrollIntoView(true)
+    },
+    toSkill () {
+      document.querySelector('#skillPage').scrollIntoView(false)
+    },
+    toWork () {
+      document.querySelector('#worksPage').scrollIntoView(true)
     }
   },
   mounted () {
@@ -186,10 +196,8 @@ export default {
       if (screenHeight > 0) {
         nav.classList.add('active')
         nav.style.padding = '20px 2%'
-        console.log('超過0px')
       } else {
         nav.classList.remove('active')
-        console.log('現在歸零了')
       }
     })
   }

@@ -1,9 +1,10 @@
 <template>
     <div class="footer">
+        <p>Know more about me</p>
         <div class="contact all_box" >
-            <div><a href="https://github.com/junefish1414" target="_blank"><img src="../assets/image/icon-1.png" alt=""></a></div>
-            <div><a href="https://codepen.io/collection/oEgVEr" target="_blank"><img src="../assets/image/icon-2.png" alt=""></a></div>
-            <div><a href="mailto:acc101130@gm.ntcu.edu.tw" ><img src="../assets/image/icon-3.png" alt=""></a></div>
+            <div title="My GitHub"><a href="https://github.com/junefish1414" target="_blank"><img src="../assets/image/icon-1.svg" alt=""></a></div>
+            <div title="My CodePen"><a href="https://codepen.io/collection/oEgVEr" target="_blank"><img src="../assets/image/icon-2.svg" alt=""></a></div>
+            <div title="Email"><a href="mailto:acc101130@gm.ntcu.edu.tw" ><img src="../assets/image/icon-3.svg" alt=""></a></div>
         </div>
         <div class="copyright">Copyright © 2021 Xin-Yu Wang</div>
     </div>
@@ -20,8 +21,14 @@ $line-fz:24px;
 $line-fz-title:20px;
 
 .footer{
+    margin-top: 50px;
+    text-align: center;
+    p{
+        font-size: $line-fz-title;
+        color: $primay-color-light;
+    }
     .contact{
-        margin-top: 50px;
+        margin-top: 15px;
         display: flex;
         align-items: center;
         justify-content: center;

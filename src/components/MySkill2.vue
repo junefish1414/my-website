@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <a id="skillPage">
         <div class="MySkill">
             <div class="title">
                 <div class="all_box">
@@ -9,8 +9,8 @@
             </div>
         </div>
         <div class="panels" >
-            <div class="panel panel1">
-                <p>my skill</p>
+            <div class="panel panel1" title="Click Me to Know More">
+                <p>My Skill of</p>
                 <p>HTML/CSS</p>
                 <p>
                     ◆ 熟悉 HTML5 、 CSS3 <br>
@@ -23,8 +23,8 @@
                     ◆ 可使用 NPM 基本指令管理專案
                 </p>
             </div>
-            <div class="panel panel2">
-                <p>my skill</p>
+            <div class="panel panel2" title="Click Me to Know More">
+                <p>My Skill of</p>
                 <p>JavaScript</p>
                 <p>
                     ◆ 使用 ES5、 ES6 語法<br>
@@ -37,8 +37,8 @@
                     ◆ 了解 Option API 結構與 V 指令<br>
                 </p>
             </div>
-            <div class="panel panel3">
-                <p>my skill</p>
+            <div class="panel panel3" title="Click Me to Know More">
+                <p>My Skill of</p>
                 <p>Others</p>
                 <p>版本控制：<br>
                     ◆ 使用 Git 進行版本控制 <br>
@@ -49,7 +49,7 @@
                 </p>
             </div>
          </div>
-    </div>
+    </a>
 </template>
 
 <style lang="scss">
@@ -141,8 +141,8 @@ $line-fz-title:20px;
 }
 .panel >p:first-child{
     color: $primay-color;
-    font-size: $line-fz;
-    font-weight: bold;
+    font-size:$line-fz-title;
+    font-weight: 500;
     transform: translateY(-200%);
     opacity: 0;
     margin-bottom: -15px;
@@ -179,7 +179,8 @@ $line-fz-title:20px;
 }
 .panel p:nth-child(2) {
     font-size: 3em;
-    font-weight: 400;
+    font-weight: 300;
+    letter-spacing:0.02em;
 }
 .panel.open {
     flex: 1.5;

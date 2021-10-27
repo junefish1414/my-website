@@ -18,6 +18,7 @@ body{
   width: 100%;
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
   *{
     box-sizing: border-box;
     text-decoration: none;
@@ -82,6 +83,11 @@ body{
 @media screen and (max-width: 1920px) {
     .all_box{
         max-width: 1200px;
+    }
+}
+@media screen and (max-width: 1300px) {
+    .all_box{
+        width: 90%;
     }
 }
 </style>

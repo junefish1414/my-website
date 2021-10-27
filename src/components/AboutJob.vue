@@ -2,13 +2,13 @@
    <div class="aboutJob">
        <div class="all_box">
            <div class="jContent">
-               <div class="jc-left" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+               <div class="jc-left" >
                    <div class="jc-l-t">
-                       <div class="jc-num">
+                       <div class="jc-num" data-aos="fade-right" data-aos-delay="300" data-aos-duration="800">
                            <h3><span>2</span>years</h3>
                            <h5>網頁相關經驗</h5>
                        </div>
-                       <div class="jc-num">
+                       <div class="jc-num" data-aos="fade-right" data-aos-delay="500" data-aos-duration="800">
                            <h3><span>50</span>plus</h3>
                            <h5>累積大小專案參與製作</h5>
                        </div>
@@ -19,6 +19,7 @@
            </div>
        </div>
    </div>
+   <!-- data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" -->
 </template>
 
 <style lang="scss">
@@ -28,16 +29,20 @@
     }
     .highlightSpot {
             transition: all 0.2s;
-            border-bottom: 2px solid white;
+            border-bottom: 1px solid white;
             position: absolute;
             top: 0;
-            background: white;
+            background: #70a9a187;
+            display: flex;
+            align-items: center;
             left: 0;
-            z-index: -1;
+            z-index: 0;
             border-radius: 20px;
-            display: block;
-            color:#70A9A1;
+            color:#FFF;
+            padding: 3px 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            text-decoration: none;
+            font-family: 'Raleway','微軟正黑體', sans-serif;
     }
     .aboutJob{
         background-image: url(../assets/image/aboutJob_bg.png);
@@ -102,32 +107,34 @@
 export default {
   name: 'AboutJob',
   methods: {
-    highlightLink (e) {
-      console.log(e.target)
-      if (e.target.nodeName === 'A') {
-        console.log('正選到A')
+  },
+  mounted () {
+    const triggers = document.querySelectorAll('.jc-text a')
+    const highlight = document.createElement('p')
+    highlight.classList.add('highlightSpot')
+    // const aboutJob = document.querySelector('.jc-text')
+    // aboutJob.append(highlight)
+    document.body.append(highlight)
+
+    // 效果
+    function highlightLink () {
+      const linkCoords = this.getBoundingClientRect()
+      const innerText = this.innerText
+      console.log(innerText)
+      console.log(linkCoords)
+      const coords = {
+        width: linkCoords.width,
+        height: linkCoords.height,
+        left: linkCoords.left + window.scrollX,
+        top: linkCoords.top + window.scrollY
       }
-    //   const highlight = document.createElement('span')
-    //   highlight.classList.add('highlightSpot')
-    //   const app = document.querySelector('#app')
-    //   console.log(app)
-    //   document.body.append(highlight)
-    //   console.log('被觸發了')
-    //   console.log(e.target.offsetHeight, e.target.offsetWidth)
-    //   console.log(e.target.offsetTop, e.target.offsetLeft)
-    //   const coords = {
-    //     width: e.target.offsetWidth,
-    //     height: e.target.offsetHeight,
-    //     left: e.target.offsetLeft,
-    //     top: e.target.offsetTop
-    //   }
-    //   highlight.style.width = `${coords.width}px `
-    //   highlight.style.height = `${coords.height}px`
-    //   highlight.style.transform = `translate(${coords.left}px, ${coords.top}px)`
-    },
-    outHighLight () {
-      console.log('我移出了')
-    }
+      highlight.style.width = `${coords.width}px `
+      highlight.style.height = `${coords.height}px`
+      highlight.style.transform = `translate(${coords.left}px, ${coords.top}px)`
+      highlight.innerHTML = innerText
+    };
+
+    triggers.forEach(a => a.addEventListener('mouseenter', highlightLink))
   }
 }
 </script>

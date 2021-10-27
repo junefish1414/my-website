@@ -6,7 +6,7 @@
                 <p>工作經驗</p>
             </div>
             <div class="exContent">
-                <div class="e_c_single">
+                <div class="e_c_single" data-aos="fade-up" data-aos-delay="500" data-aos-duration="800">
                     <h4>2018.11-2021.06
                         <div class="circle"></div>
                         <div class="circle circle_animation"></div>
@@ -22,7 +22,7 @@
                         <li>專案維護：與其他設計師交接，維護與管理專案。</li>
                     </ul>
                 </div>
-                <div class="e_c_single">
+                <div class="e_c_single" data-aos="fade-up" data-aos-delay="500" data-aos-duration="800">
                     <h4>2016.08 - 2018.09
                         <div class="circle past-circle"></div>
                         <div class="circle circle_animation"></div>
@@ -39,7 +39,7 @@
                         <li>配合公司交辦之事項</li>
                     </ul>
                 </div>
-                <div class="e_c_single">
+                <div class="e_c_single" data-aos="fade-up" data-aos-delay="500" data-aos-duration="800">
                     <h4>2014.12 - 2016.06
                         <div class="circle past-circle"></div>
                         <div class="circle circle_animation"></div>
@@ -60,10 +60,12 @@
 </template>
 
 <style lang="scss">
+// 規範
 $primay-color:#C79B6E;
 $primay-color-light:#E2D6C6;
 $secondary-color: #47533F;
 $title-fz:70px;
+$title-skill:60px;
 $line-fz:24px;
 $line-fz-title:20px;
 
@@ -85,6 +87,17 @@ $line-fz-title:20px;
     border-left: 1px solid #E2D6C6;
     color: #707070;
     line-height: 180%;
+    position: relative;
+    &:before{
+        content: "";
+        background-color: #fff;
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translateX(-50%);
+    }
     h4{
         font-size: $line-fz;
         color: #707070;
