@@ -2,8 +2,8 @@
   <div id="nav" @scroll="navChange">
     <a class="Logo" href="#">June</a>
     <div>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">CakeResume</router-link> |
+      <router-link to="/about">104個人履歷</router-link>
     </div>
   </div>
   <div class="phone-nav active">

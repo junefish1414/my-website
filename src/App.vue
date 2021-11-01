@@ -39,6 +39,9 @@ body{
     transition: ease .2s;
   }
 }
+img{
+  max-width: 100%;
+}
 #app {
   font-family: 'Raleway','微軟正黑體', sans-serif;
   -webkit-font-smoothing: antialiased;

@@ -70,6 +70,7 @@ p{
         top: -100px;
     }
     img{
+        width: 100%;
         max-width:350px;
         box-shadow: -50px 50px 50px rgba(60, 70, 53, 0.89);
     }
@@ -178,7 +179,14 @@ $phone-media:500px;
         font-size: 26px;
     }
 }
-
+@media screen and (max-width: $phone-media) {
+    .title{
+        line-height: 80px;
+        &:before{
+            font-size: 40px;
+        }
+    }
+}
 </style>
 
 <script>

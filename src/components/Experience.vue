@@ -194,6 +194,22 @@ $phone-media:500px;
     }
 
 }
+@media screen and (max-width: $phone-media) {
+    .experience .title h2 {
+        font-size: 40px;
+    }
+    .exContent {
+    padding-left: 5vh;
+    }
+    .exContent h4 .circle {
+    left: -5vh;
+    width: 15px;
+    height: 15px;
+    }
+    .exContent li {
+    margin-left: -8px;
+    }
+}
 </style>
 
 <script>
