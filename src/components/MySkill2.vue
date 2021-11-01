@@ -220,6 +220,18 @@ $phone-media:500px;
         width: 100%;
     }
 }
+@media screen and (max-width: $phone-media) {
+    .MySkill .title h2 {
+    font-size: 40px;
+    }
+    .MySkill .title span {
+        background-color: #E2D6C6;
+        padding: 3px 10px;
+        margin-left: -6px;
+        font-size: 18px;
+        }
+
+}
 </style>
 
 <script>

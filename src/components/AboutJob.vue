@@ -131,6 +131,14 @@ $phone-media:500px;
     }
 }
 
+@media screen and (max-width: $phone-media) {
+    .jContent .jc-left .jc-l-t .jc-num span {
+        font-size: 40px;
+    }
+    .jContent .jc-left .jc-l-t .jc-num h3 {
+    font-size: 26px;
+    }
+}
 </style>
 
 <script>

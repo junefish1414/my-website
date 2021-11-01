@@ -1,9 +1,9 @@
 <template>
   <div id="nav" @scroll="navChange">
     <a class="Logo" href="#">June</a>
-    <div>
+    <div class="My-resume">
       <router-link to="/">CakeResume</router-link> |
-      <router-link to="/about">104個人履歷</router-link>
+      <a href="">104個人履歷</a>
     </div>
   </div>
   <div class="phone-nav active">
@@ -82,7 +82,9 @@ a {
     border-bottom: 6px solid;
   }
 }
-
+.My-resume{
+  font-family: "Century Gothic",san-serif;
+}
 .landingPage{
   width: 100%;
   height: 100%;
@@ -258,7 +260,12 @@ export default {
       document.querySelector('#aboutPage').scrollIntoView(true)
     },
     toSkill () {
-      document.querySelector('#skillPage').scrollIntoView(false)
+      const screenWidth = window.outerWidth
+      if (screenWidth > 600) {
+        document.querySelector('#skillPage').scrollIntoView(false)
+      } else {
+        document.querySelector('#skillPage').scrollIntoView(true)
+      }
     },
     toWork () {
       document.querySelector('#worksPage').scrollIntoView(true)
@@ -277,7 +284,6 @@ export default {
       }
     })
     window.addEventListener('resize', e => {
-      console.log('我載好了')
       const screenWidth = window.outerWidth
       const nav = document.querySelector('#nav')
       if (screenWidth < 600) {

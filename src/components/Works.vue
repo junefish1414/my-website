@@ -189,6 +189,18 @@ $phone-media:500px;
         height: 50vw;
         width: 100%;
     }
+    .worksAll .work .work-mask{
+        opacity: 1;
+    }
+    .Works .title:before {
+    content: 'WORKS.';
+    color: #1f251b;
+    font-weight: normal;
+    font-size:40px;
+    }
+    .Works .intro p {
+    margin-top: -45px;
+    }
 }
 </style>
 
