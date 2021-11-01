@@ -176,7 +176,24 @@ $line-fz-title:20px;
         }
     }
 }
+// RWD
+$full-media:1300px;
+$pc-media:960px;
+$pad-media:780px;
+$phone-media:500px;
+@media screen and (max-width: $pad-media) {
+    .experience .title h2 {
+        font-size: 3.5em;
+    }
+    .exContent h4 ,.exContent h5{
+        font-size: 1.3em;
+    }
+    .exContent ul {
+        color: #939291;
+        font-size: 14px;
+    }
 
+}
 </style>
 
 <script>

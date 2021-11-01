@@ -9,12 +9,12 @@
                     <div class="title">01</div>
                     <div class="aboutText">
                         <h3 data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"><span>王歆瑜</span>Xin Yu Wang</h3>
-                        <p data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">嗨！我是June，對所有事物都充滿好奇心並願意嘗試與挑戰。熱愛設計與音樂，喜歡捕捉生活中的片刻感動並融入設計中。經常有人以能動能靜形容我，平時活潑熱情，但當需要專注在自己手上的任務時，願意付出長時間研究並有耐心地處理遇到的問題。<br><br>
+                        <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">嗨！我是June，對所有事物都充滿好奇心並願意嘗試與挑戰。熱愛設計與音樂，喜歡捕捉生活中的片刻感動並融入設計中。經常有人以能動能靜形容我，平時活潑熱情，但當需要專注在自己手上的任務時，願意付出長時間研究並有耐心地處理遇到的問題。<br><br>
 
     原以平面設計出發，自從接觸到網頁設計之後，意識到 Coding 的豐富與多元。目前致力於研究前端技術，以持續探索 Web 未知的可能性為樂。增進能力之餘，不定期會新增一些JS的小作品，也記錄程式相關筆記與自己的心路歷程，希望以後能開發出更多有趣的 Side Project。
     </p>
                     </div>
-                    <div class="contact" data-aos="fade-up" data-aos-delay="700" data-aos-duration="1000">
+                    <div class="contact" data-aos="fade-up" data-aos-delay="500" data-aos-duration="800">
                         <div><img src="../assets/image/icon-1.svg" alt=""><a title="My GitHub" href="https://github.com/junefish1414" target="_blank">GitHub | @junefish1414</a></div>
                         <div><img src="../assets/image/icon-2.svg" alt=""><a title="My CodePen" href="https://codepen.io/collection/oEgVEr" target="_blank">CodePen精選 | @yyfish1414</a></div>
                         <div><img src="../assets/image/icon-3.svg" alt=""><a title="Email" href="mailto:acc101130@gm.ntcu.edu.tw" >E-mail | acc101130@gm.ntcu.edu.tw</a></div>
@@ -136,6 +136,46 @@ p{
         a{
             color: $primay-color;
         }
+    }
+}
+// RWD
+$full-media:1300px;
+$pc-media:960px;
+$pad-media:780px;
+$phone-media:500px;
+@media screen and (max-width: $full-media) {
+  .sizeBox{
+    height: auto;
+  }
+}
+@media screen and (max-width: $pc-media) {
+    .about {
+        display: block;
+    }
+    .pic {
+        text-align: center;
+        img{
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+        }
+        &:before{
+            z-index: -1;
+            background-color: #47533F;
+            content: "";
+            width: 115%;
+            min-height: 50%;
+            position: absolute;
+            right: -5%;
+            top: auto;
+            transform: translate(0, -50%);
+        }
+    }
+}
+@media screen and (max-width: $pad-media) {
+    .aboutText h3{
+        font-size: 18px;
+    }
+    .aboutText h3 span{
+        font-size: 26px;
     }
 }
 

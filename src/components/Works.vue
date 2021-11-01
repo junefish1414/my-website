@@ -173,6 +173,23 @@ $line-fz-middle:18px;
 
 }
 
+// RWD
+$full-media:1300px;
+$pc-media:960px;
+$pad-media:780px;
+$phone-media:500px;
+@media screen and (max-width: $pc-media) {
+    .worksAll .work {
+        height: 26vw;
+        width: 48%;
+    }
+}
+@media screen and (max-width: $phone-media) {
+    .worksAll .work {
+        height: 50vw;
+        width: 100%;
+    }
+}
 </style>
 
 <script>

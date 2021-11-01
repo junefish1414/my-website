@@ -6,6 +6,14 @@
       <router-link to="/about">About</router-link>
     </div>
   </div>
+  <div class="phone-nav active">
+    <a class="Logo" href="#">June</a>
+    <div class="phone-icon">
+      <div title="My GitHub"><a href="https://github.com/junefish1414" target="_blank"><img src="../assets/image/icon-1.svg" alt=""></a></div>
+      <div title="My CodePen"><a href="https://codepen.io/collection/oEgVEr" target="_blank"><img src="../assets/image/icon-2.svg" alt=""></a></div>
+      <div title="Email"><a href="mailto:acc101130@gm.ntcu.edu.tw" ><img src="../assets/image/icon-3.svg" alt=""></a></div>
+    </div>
+  </div>
   <div class="landingPage" @scroll="navChange">
     <div class="menus">
       <a class="menu" data-menuName="about" @mouseenter="changeBackground" @mouseleave="recoverBackground" @click="toAbout">
@@ -28,6 +36,13 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+$primay-color:#C79B6E;
+$primay-color-light:#E2D6C6;
+$secondary-color: #47533F;
+$landing-title:105px;
+$title-fz:70px;
+$line-fz:24px;
+
 h3 {
   margin: 40px 0 0;
 }
@@ -62,11 +77,12 @@ a {
     }
   }
   .Logo{
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 600;
     border-bottom: 6px solid;
   }
 }
+
 .landingPage{
   width: 100%;
   height: 100%;
@@ -80,6 +96,7 @@ a {
   // background-image: url(../../image/Mask-Group-6.png);
   background-size: cover;
   padding: 0 3%;
+  z-index: 99;
 }
 .allBox{
   width: 90%;
@@ -97,7 +114,7 @@ a {
       color: #FFF;
     }
     .eng{
-      font-size: 105px;
+      font-size: $landing-title;
     }
     .num{
       margin-right: 10px;
@@ -130,6 +147,61 @@ a {
   transition: ease .3s;
   .Logo{
     font-size: 30px!important;
+  }
+}
+.phone-nav{display: none;}
+// RWD
+$full-media:1300px;
+$pc-media:960px;
+$pad-media:780px;
+$phone-media:500px;
+@media screen and (max-width: $full-media) {
+  .landingPage {
+    align-items: center;
+  }
+    .menus{
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        .menu{
+          margin: 25px 0;
+          .eng{
+            font-size:$title-fz;
+          }
+      }
+    }
+  .more {
+    bottom: 50px;
+    left: auto;
+    right: 3%;
+  }
+}
+@media screen and (max-width: $pad-media) {
+  .copyright{
+    display: none;
+  }
+  #nav{
+    display: none;
+  }
+  .phone-nav{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+    width: 100%;
+    position: absolute;
+    .Logo{
+      font-weight: bold;
+      color: #2c3e50;
+    }
+  }
+  .phone-icon{
+    display: flex;
+    div{
+      margin: 0 5px;
+    }
   }
 }
 
@@ -172,9 +244,12 @@ export default {
       const landingBg = document.querySelector('.landingPage')
       const more = document.querySelector('.more')
       const nav = document.querySelector('#nav')
-      landingBg.style.backgroundImage = 'url(https://upload.cc/i1/2021/10/22/2htqeB.png)'
-      more.style.display = 'block'
-      nav.style.display = 'flex'
+      const screenWidth = window.outerWidth
+      if (screenWidth > 768) {
+        landingBg.style.backgroundImage = 'url(https://upload.cc/i1/2021/10/22/2htqeB.png)'
+        more.style.display = 'block'
+        nav.style.display = 'flex'
+      }
     },
     navChange () {
       console.log('滑動觸發')
@@ -193,11 +268,21 @@ export default {
     window.addEventListener('scroll', e => {
       const screenHeight = window.scrollY
       const nav = document.querySelector('#nav')
-      if (screenHeight > 0) {
+      const screenWidth = window.outerWidth
+      if (screenHeight > 0 && screenWidth > 780) {
         nav.classList.add('active')
-        nav.style.padding = '20px 2%'
+        nav.style.padding = '20px 20px'
       } else {
         nav.classList.remove('active')
+      }
+    })
+    window.addEventListener('resize', e => {
+      console.log('我載好了')
+      const screenWidth = window.outerWidth
+      const nav = document.querySelector('#nav')
+      if (screenWidth < 600) {
+        nav.classList.add('active')
+        nav.style.padding = '20px 20px'
       }
     })
   }

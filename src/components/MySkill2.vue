@@ -19,7 +19,7 @@
                     ◆ 熟悉 CSS FlexBox 排版<br>
                     ◆ 熟悉 CSS3 動畫製作動態效果<br>
                     ◆ 可使用 SCSS、Pug ( jade ) 等預處理器進行模組化管理<br>
-                    ◆ 具備 Bootstrap4、5 開發專案能力<br>
+                    ◆ 具備 Bootstrap4、5 開發知識<br>
                     ◆ 可使用 NPM 基本指令管理專案
                 </p>
             </div>
@@ -190,6 +190,36 @@ $line-fz-title:20px;
         background-color: rgba(80,80,80,0.8);
     }
 }
+// RWD
+$full-media:1300px;
+$pc-media:960px;
+$pad-media:780px;
+$phone-media:500px;
+@media screen and (max-width: $pc-media) {
+    .panels {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 600px) {
+    .panel{
+        display: block;
+        padding: 50px 5%;
+        border-top: 3px solid #FFF;
+    }
+    .panel > p:first-child{
+        font-size: 1.05em;
+    }
+    .panel p:nth-child(2) {
+        font-size: 2em;
+        margin-top: 10px;
+    }
+    .panel.open-active > *:last-child {
+        padding-top: 35px;
+    }
+    .panel > p:last-child {
+        width: 100%;
+    }
+}
 </style>
 
 <script>
@@ -220,19 +250,23 @@ export default {
     function toggleOpen () {
       if (this !== nowClickPanel) {
         nowClickPanel.classList.remove('open')
+        console.log(this)
       }
       this.classList.toggle('open')
-    };
+    }
 
     function toggleActive (e) {
       if (e.propertyName.includes('flex')) {
-        console.log(e.propertyName)
         this.classList.toggle('open-active')
       }
     }
-
-    panels.forEach(item => item.addEventListener('click', toggleOpen))
-    panels.forEach(item => item.addEventListener('transitionend', toggleActive))
+    if (window.outerWidth > 600) {
+      panels.forEach(item => item.addEventListener('click', toggleOpen))
+      panels.forEach(item => item.addEventListener('transitionend', toggleActive))
+    } else {
+      panels.forEach(item => item.classList.add('open-active'))
+      panels.forEach(item => item.classList.add('open'))
+    }
   }
 }
 </script>

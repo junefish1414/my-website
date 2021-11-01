@@ -23,6 +23,12 @@
 </template>
 
 <style lang="scss">
+//顏色規範
+$primay-color:#C79B6E;
+$primay-color-light:#E2D6C6;
+$secondary-color: #47533F;
+$title-fz:70px;
+$line-fz:24px;
 
     body{
         position: relative;
@@ -32,7 +38,7 @@
             border-bottom: 1px solid white;
             position: absolute;
             top: 0;
-            background: #70a9a187;
+            background: #74c2b7b2;
             display: flex;
             align-items: center;
             left: 0;
@@ -43,6 +49,7 @@
             box-shadow: 0 0 10px rgba(0,0,0,0.2);
             text-decoration: none;
             font-family: 'Raleway','微軟正黑體', sans-serif;
+            opacity: 0;
     }
     .aboutJob{
         background-image: url(../assets/image/aboutJob_bg.png);
@@ -98,9 +105,32 @@
                 padding: 3px 8px;
                 margin: 0 1px;
                 cursor: default;
+                transition: ease .3s;
                 }
         }
     }
+// RWD
+$full-media:1300px;
+$pc-media:960px;
+$pad-media:780px;
+$phone-media:500px;
+@media screen and (max-width: 1200px) {
+    .jContent .jc-text a:hover{
+        background-color:  #74c2b7b2;
+    }
+}
+@media screen and (max-width: $pad-media) {
+    .jContent .jc-right {
+        flex: 0;
+    }
+    .jContent .jc-left{
+        padding: 50px 0;
+    }
+    .jContent .jc-left .jc-l-t .jc-num span {
+        font-size: $title-fz;
+    }
+}
+
 </style>
 
 <script>
@@ -118,20 +148,26 @@ export default {
 
     // 效果
     function highlightLink () {
-      const linkCoords = this.getBoundingClientRect()
-      const innerText = this.innerText
-      console.log(innerText)
-      console.log(linkCoords)
-      const coords = {
-        width: linkCoords.width,
-        height: linkCoords.height,
-        left: linkCoords.left + window.scrollX,
-        top: linkCoords.top + window.scrollY
+      console.log(window.outerWidth)
+      if (window.outerWidth < 1200) {
+        console.log('不執行highlightSpot')
+      } else {
+        const linkCoords = this.getBoundingClientRect()
+        const innerText = this.innerText
+        console.log(innerText)
+        console.log(linkCoords)
+        const coords = {
+          width: linkCoords.width,
+          height: linkCoords.height,
+          left: linkCoords.left + window.scrollX,
+          top: linkCoords.top + window.scrollY
+        }
+        highlight.style.width = `${coords.width}px `
+        highlight.style.height = `${coords.height}px`
+        highlight.style.transform = `translate(${coords.left}px, ${coords.top}px)`
+        highlight.style.opacity = '1'
+        highlight.innerHTML = innerText
       }
-      highlight.style.width = `${coords.width}px `
-      highlight.style.height = `${coords.height}px`
-      highlight.style.transform = `translate(${coords.left}px, ${coords.top}px)`
-      highlight.innerHTML = innerText
     };
 
     triggers.forEach(a => a.addEventListener('mouseenter', highlightLink))
