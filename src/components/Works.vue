@@ -52,6 +52,9 @@
                         <a href="http://www.shiouda.com.tw/" target="_blank"><img src="../assets/image/link-icon.svg" alt=""></a>
                     </div>
                 </a>
+                <a href="https://junefish1414.github.io/my-work/index.html" target="_blank" class="work work6">
+                    <a href="https://junefish1414.github.io/my-work/index.html" target="_blank" class="more_work">更多作品</a>
+                </a>
             </div>
         </div>
     </a>
@@ -124,6 +127,10 @@ $line-fz-middle:18px;
         overflow: hidden;
         transition: ease-in .3s;
         margin: 15px 1%;
+        &:last-child{
+            align-items: center;
+            justify-content: center;
+        }
         &:hover .work-mask{
             opacity: 1;
         }
@@ -154,11 +161,24 @@ $line-fz-middle:18px;
         }
     }
 }
+.more_work{
+    color: #FFF;
+    border: 1px solid #FFF;
+    padding: 5px 2vw;
+    text-align: center;
+    &:hover{
+        background-color: #fff;
+        color: #000;
+        letter-spacing: 2px;
+        border-radius: 5px;
+    }
+}
 .work1{background-image: url(../assets/image/work01.png);}
 .work2{background-image: url(../assets/image/work02.png);}
 .work3{background-image: url(../assets/image/work03.png);}
 .work4{background-image: url(../assets/image/work04.png);}
 .work5{background-image: url(../assets/image/work05.png);}
+.work6{background-image: url(../assets/image/work06.png);}
 
 @keyframes scaleBig {
     0%{

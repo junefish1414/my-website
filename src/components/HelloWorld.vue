@@ -2,8 +2,8 @@
   <div id="nav" @scroll="navChange">
     <a class="Logo" href="#">June</a>
     <div class="My-resume">
-      <router-link to="/">CakeResume</router-link> |
-      <a href="">104個人履歷</a>
+      <a href="https://pda.104.com.tw/profile/edit?vno=75wrssp1l" target="_blank">104個人履歷</a> |
+      <a href="https://junefish1414.github.io/my-work/index.html" target="_blank">作品集</a>
     </div>
   </div>
   <div class="phone-nav active">
