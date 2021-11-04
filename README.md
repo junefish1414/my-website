@@ -34,22 +34,22 @@ Hi，我是June，原以平面設計出發，自從接觸到網頁設計之後�
 
 ## 前端介紹
 
-### 首頁-滑鼠移入不同標題的時候大圖切換對應背景
+#### 首頁-滑鼠移入不同標題的時候大圖切換對應背景
 ![](https://i.imgur.com/qfic4U2.gif)
 
 <br>
 
-### 引入 AOS 的滾動框架動畫
+#### 引入 AOS 的滾動框架動畫
 ![](https://i.imgur.com/sekF4fG.gif)
 
 <br>
 
-### CSS3 指標提示小動畫
+#### CSS3 指標提示小動畫
 ![](https://i.imgur.com/TlyapxP.gif)
 
 <br>
 
-### CSS3 FlexBox 排版與運用
+#### CSS3 FlexBox 排版與運用
 ![](https://i.imgur.com/3hJ1bh2.gif)
 
 ## 更多
