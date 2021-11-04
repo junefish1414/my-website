@@ -15,12 +15,13 @@ Hi，我是June，原以平面設計出發，自從接觸到網頁設計之後�
 > Demo: https://junefish1414.github.io/my-website/#/
 
 ## 設計理念
-**主要風格：** 簡潔、單純、森林系
-**採用色系：**
-![](https://i.imgur.com/noS1Xdy.png)
-<br>
+**主要風格：** 簡潔、單純、森林系 <br>
 
-**圖片來源：** Unsplash、Freepik、Flaticon
+**採用色系：**
+![](https://i.imgur.com/noS1Xdy.png) <br>
+
+**圖片來源：** Unsplash、Freepik、Flaticon <br>
+
 **字體引用：** [Google Fonts - Raleway](https://fonts.google.com/specimen/Raleway)
 
 ## 專案說明
@@ -56,5 +57,5 @@ Hi，我是June，原以平面設計出發，自從接觸到網頁設計之後�
 > 
 嘗試用框架搭配 SCSS 去建立專案，從中也學到很多不同的處理方式，很多部分的效果都和我預期的不太一樣，所以大多都是自己透過各種管道爬找文獻慢慢拼湊，可能還有很多不足的地方，非常歡迎大家給我建議跟指教！
 
-點擊[Demo](https://junefish1414.github.io/my-website/#/)觀看更多細節
+點擊[Demo](https://junefish1414.github.io/my-website/#/)觀看更多細節 <br>
 或是[來信告訴我](mailto:acc101130@gm.ntcu.edu.tw)哪裏可以改進！
