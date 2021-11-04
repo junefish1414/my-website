@@ -1,16 +1,5 @@
 
-<style>
-    #doc.comment-enabled.comment-inner{
-        line-height:29px;
-    }
-    .markdown-body h2{
-        margin-top:40px;
-    }
-    #Hi-I’am-June{
-        text-align:center;
-    }
-    
-</style>
+
 # Hi, I'am June!
 `  Graphic Design  ` | `  Web Designer  ` | `  Frontend engineer  `
 
